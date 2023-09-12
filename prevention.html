@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suicide Prevention Number Search</title>
+</head>
+<body>
+    <h1>Find Your Country's Suicide Prevention Number</h1>
+    <p>Enter your country:</p>
+    <input type="text" id="countryInput">
+    <button onclick="searchSuicidePreventionNumber()">Search</button>
+
+    <p id="searchResult"></p>
+
+    <script>
+        function searchSuicidePreventionNumber() {
+            const country = document.getElementById("countryInput").value;
+            const searchQuery = `suicide prevention number ${country}`;
+            const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+            window.location.href = searchUrl;
+        }
+    </script>
+</body>
+</html>
